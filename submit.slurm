@@ -5,9 +5,10 @@
 #SBATCH --nodes=8
 #SBATCH --tasks-per-node=2
 #SBATCH --mem=16G 
-#SBATCH --time=50:00:00
-#SBATCH --job-name=kaon
-MMASCRIPTPATH="/home/jnh201/chiralLagrangians/kaon/"
+#SBATCH --time=48:00:00
+#SBATCH --job-name=Y2175
+#MMASCRIPTPATH="/home/jnh201/chiralLagrangians/kaon/"
+MMASCRIPTPATH="/home/jnh201/GSR-y2175/"
 
 MMASCRIPT="evalMMA.m"
 now=$(date +%F)
@@ -21,8 +22,8 @@ echo "Starting run at: `date`"
 cd $MMASCRIPTPATH
 mkdir "$now"
 cd ..
-git add kaon/
-git commit -m "Running kaon/ project on plato.usask.ca on $now"
+git add .
+git commit -m "Running Y2175 project on plato.usask.ca on $now"
 git push 
 cd $MMASCRIPTPATH
 cd "$now"
