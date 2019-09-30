@@ -1,2 +1,0 @@
-#!/bin/bash
-math -script ~/GSR-ss/test/test.nb.mmaNotebookEvaluator
